@@ -25,16 +25,16 @@ public class ApplicationStartRunner implements CommandLineRunner {
                 .productId("1")
                 .build();
         Inventory inventory2 = Inventory.builder()
-                .quantity(10)
-                .productId("1")
+                .quantity(20)
+                .productId("2")
                 .build();
         Inventory inventory3 = Inventory.builder()
-                .quantity(10)
-                .productId("1")
+                .quantity(0)
+                .productId("3")
                 .build();
         Inventory inventory4 = Inventory.builder()
-                .quantity(10)
-                .productId("1")
+                .quantity(5)
+                .productId("4")
                 .build();
 
         repository.saveAll(List.of(inventory, inventory2, inventory3, inventory4));

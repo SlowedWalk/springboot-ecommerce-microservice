@@ -1,4 +1,4 @@
-package tech.hidetora.inventoryservice.dto;
+package tech.hidetora.inventoryservice.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;

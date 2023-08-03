@@ -6,8 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import tech.hidetora.orderservice.model.OrderItem;
 
-import java.math.BigDecimal;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

@@ -4,14 +4,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tech.hidetora.productservice.dto.ProductDto;
 import tech.hidetora.productservice.enumeration.ErrorCodes;
 import tech.hidetora.productservice.exception.ProductAlreadyExistException;
 import tech.hidetora.productservice.exception.ProductNotFoundException;
-import tech.hidetora.productservice.model.Product;
 import tech.hidetora.productservice.repository.ProductRepository;
+import tech.hidetora.productservice.dto.ProductDto;
+import tech.hidetora.productservice.model.Product;
 
-import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;

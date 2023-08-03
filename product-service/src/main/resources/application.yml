@@ -1,3 +1,4 @@
+#debug: true
 spring:
   application:
     name: product-service
@@ -23,7 +24,10 @@ spring:
 #      - trace
 #      - fatal
 server:
-  port: 8080
-#debug: true
-
+  port: 0
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+        defaultZone: http://localhost:8761/eureka/
 

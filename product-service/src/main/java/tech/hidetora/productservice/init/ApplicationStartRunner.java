@@ -10,7 +10,6 @@ import tech.hidetora.productservice.model.Product;
 import tech.hidetora.productservice.repository.ProductRepository;
 
 import java.math.BigDecimal;
-import java.time.Instant;
 import java.util.List;
 
 @Component

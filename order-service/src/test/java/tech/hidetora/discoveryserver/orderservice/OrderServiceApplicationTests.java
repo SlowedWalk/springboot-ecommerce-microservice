@@ -1,4 +1,4 @@
-package tech.hidetora.orderservice;
+package tech.hidetora.discoveryserver.orderservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
