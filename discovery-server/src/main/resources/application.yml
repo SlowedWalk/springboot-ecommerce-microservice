@@ -1,4 +1,6 @@
 eureka:
+  username: eureka
+  password: password
   client:
     enabled: true
     register-with-eureka: false

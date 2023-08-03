@@ -1,4 +1,7 @@
 #debug: true
+application:
+  title: Product Service
+  version: 1.0.0
 spring:
   application:
     name: product-service
@@ -29,5 +32,5 @@ eureka:
   client:
     register-with-eureka: true
     service-url:
-        defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka:password@localhost:8761/eureka/
 

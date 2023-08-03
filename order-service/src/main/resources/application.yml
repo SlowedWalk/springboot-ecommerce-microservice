@@ -1,4 +1,7 @@
 #debug: true
+application:
+  title: Order Service
+  version: 1.0.0
 spring:
   application:
     name: order-service
@@ -14,6 +17,8 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+
+# Circuit Breaker
 #logging:
 #  level:
 #    web:
@@ -29,4 +34,46 @@ eureka:
   client:
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka:password@localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+  health:
+    circuitbreakers:
+      enabled: true
+
+# Resilience4j Configurations
+resilience4j:
+  timelimiter:
+    instances:
+        inventory:
+            timeoutDuration: 5s
+  circuitbreaker:
+    instances:
+      inventory:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        minimumNumberOfCalls: 5
+  retry:
+    instances:
+        inventory:
+            waitDuration: 5s
+            maxAttempts: 3
+#        recordExceptions:
+#          - java.io.IOException
+#          - java.util.concurrent.TimeoutException
+#          - java.lang.Exception
+#        ignoreExceptions:
+#          - java.lang.RuntimeException
+#          - java.lang.Exception

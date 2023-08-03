@@ -1,12 +1,12 @@
-package tech.hidetora.discoveryserver.orderservice;
+package tech.hidetora.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
 
-@SpringBootTest
-class OrderServiceApplicationTests {
 
+@SpringBootTest
+public class AppTest {
     @Test
     void contextLoads() {
     }
@@ -17,5 +17,4 @@ class OrderServiceApplicationTests {
         // application config
 
     }
-
 }

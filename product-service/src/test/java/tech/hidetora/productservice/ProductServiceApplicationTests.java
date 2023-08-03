@@ -39,7 +39,7 @@ class ProductServiceApplicationTests {
 
     @Container
     @ServiceConnection
-    private static final MySQLContainer mySQLContainer = new MySQLContainer<>("mysql:8.0.30")
+    private static final MySQLContainer mySQLContainer = new MySQLContainer<>("mysql:latest")
             .withDatabaseName("product-service-db")
             .withUsername("admin")
             .withPassword("password");
